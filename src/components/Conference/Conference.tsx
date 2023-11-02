@@ -5,7 +5,7 @@ const Conference = () => {
     <section>
       <div className='max-w-7xl mx-auto'>
         <div className='px-4 space-y-8 py-20'>
-          <h3 className=' text-3xl font-semibold text-blue-500 font-barlow'>
+          <h3 className='text-3xl font-semibold text-blue-500 font-barlow'>
             Conferencia Especial de Nuestro CEO: <br />
             Gana dinero sin poner en riesgo tu propio Dinero
           </h3>

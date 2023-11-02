@@ -1,4 +1,5 @@
 import Conference from './components/Conference/Conference';
+import Events from './components/Events/Events';
 import Register from './components/Register/Register';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
       <section className='background py-40'></section>
       <Conference />
       <Register />
+      <Events />
     </>
   );
 }

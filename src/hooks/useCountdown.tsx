@@ -12,8 +12,9 @@ const useCountdown = (countdownTimestampMS: number) => {
   const [remainTime, setRemainTime] = useState(defaultRemainTime);
 
   useEffect(() => {
-    const timerID = setInterval(() => {}, 1000);
-    setRemainTime(getRemainingTimeUntilMSTimestamp(countdownTimestampMS));
+    const timerID = setInterval(() => {
+      setRemainTime(getRemainingTimeUntilMSTimestamp(countdownTimestampMS));
+    }, 1000);
     return () => clearInterval(timerID);
   }, [remainTime, countdownTimestampMS]);
 
