@@ -2,7 +2,7 @@ const Register = () => {
   return (
     <section className='background'>
       <div className='max-w-7xl mx-auto'>
-        <div className='flex flex-col px-4 space-y-10 py-12 md:flex-row'>
+        <div className='flex flex-col px-4 space-y-10 py-12 md:flex-row md:space-y-0 md:py-20'>
           <div className='space-y-6 md:max-w-3xl'>
             <h3 className='text-[1.8rem] leading-9 font-semibold text-white font-barlow '>
               Al registrarte hoy, llévate gratis nuestro{' '}
