@@ -1,48 +1,71 @@
 import { InlineWidget } from "react-calendly";
+import { FaChevronDown } from "react-icons/fa";
+import { useWindowSize } from "../../hooks/useWindowSize";
 
 const BannerVideo = () => {
+  const { width } = useWindowSize();
+
   return (
     <section className="background py-8 md:py-20">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto flex flex-col space-y-">
         <div>
           <h1
-            className="text-white text-[40px] md:text-[50px] text-center font-bold"
+            className="text-white text-[50px] md:text-[70px] text-center font-bold tracking-[3px]"
             style={{
               fontFamily: "family-title",
             }}
           >
-            LA ERA DORADA DEL MULTINIVEL
+            BIENVENIDO A LA <span className="text-[#a67c00]">ERA DORADA</span>
+            <br />
+            DEL MULTINIVEL
           </h1>
         </div>
 
-        <div className="flex flex-col-reverse md:flex-row w-full md:space-x-10 mt-[20px] px-4">
-          <div className="pt-[40px] md:pt-0 flex-1">
-            <InlineWidget
-              url="https://calendly.com/saulzavalamx/30min?hide_event_type_details=1&hide_gdpr_banner=1"
-              styles={{
-                height: 600,
-                width: 350,
-                margin: "0px auto",
-              }}
-            />
+        <div
+          style={{ padding: "56.25% 0 0 0", position: "relative" }}
+          className="mt-[40px]"
+        >
+          <iframe
+            src="https://player.vimeo.com/video/880704390?h=092f8223c8&autoplay=1&loop=1&byline=0&portrait=0"
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+            }}
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+
+        <div className="mt-[40px]">
+          <p
+            className="text-white text-center text-[20px] md:text-[40px] px-8"
+            style={{
+              fontFamily: "family-title",
+            }}
+          >
+            Generá tu cita lo antes posible ¡No te quedes fuera! y vive junto
+            con nosotros el inicio de esta nueva revolución.{" "}
+            <span className="font-bold">¡Te esperamos!</span>
+          </p>
+
+          <div className="flex justify-center mt-[20px]">
+            <FaChevronDown style={{ color: "white", fontSize: 40 }} />
           </div>
-          <div className="flex-1">
-            <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
-              <iframe
-                src="https://player.vimeo.com/video/880704390?h=092f8223c8&autoplay=1&loop=1&byline=0&portrait=0"
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                }}
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
+        </div>
+
+        <div>
+          <InlineWidget
+            url="https://calendly.com/saulzavalamx/30min"
+            styles={{
+              height: 700,
+              width: width && width >= 1000 ? 1000 : 350,
+              margin: "0px auto",
+            }}
+          />
         </div>
       </div>
     </section>

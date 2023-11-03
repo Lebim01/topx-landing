@@ -1,29 +1,35 @@
+import { PopupButton } from "react-calendly";
+import { FaChevronDown } from "react-icons/fa";
+
 const Register = () => {
   return (
-    <section className='background'>
-      <div className='max-w-7xl mx-auto'>
-        <div className='flex flex-col px-4 space-y-10 py-12 md:flex-row md:space-y-0 md:py-20'>
-          <div className='space-y-6 md:max-w-3xl'>
-            <h3 className='text-[1.8rem] leading-9 font-semibold text-white font-barlow '>
-              Al registrarte hoy, llévate gratis nuestro{' '}
-              <span className='whitespace-nowrap'>E-Book</span> “Cómo ganar
-              dinero sin arriesgar tu capital”
+    <section className="background">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col px-4 space-y-10 py-12 md:flex-row md:space-y-0 md:py-20">
+          <div className="space-y-6 md:max-w-3xl flex flex-col">
+            <h3 className="text-[1.8rem] leading-9 font-semibold text-white font-barlow flex-1">
+              ¡No esperes más! Reserva tu cita Zoom ahora y transforma tu futuro
+              hoy. ¡El tiempo se agota! Haz clic aquí y asegura tu espacio.
             </h3>
-            <p className='text-white font-barlow text-lg'>
-              Que incluye un capítulo de regalo para desmantelar sesgos y
-              maximizar las probabilidades favorables de tu trading.
-            </p>
-            <div className='w-full flex justify-center pt-3 md:justify-start'>
-              <button className='bg-blue-600 font-barlow text-white uppercase rounded-full px-20 py-4 font-semibold hover:bg-blue-500 tracking-widest'>
-                ¡Registrate Ahora!
-              </button>
+            <div className="w-max flex flex-col items-center pt-3 md:justify-start space-y-4">
+              <FaChevronDown style={{ color: "white", fontSize: 40 }} />
+              <PopupButton
+                className="bg-blue-600 font-barlow text-white uppercase rounded-full px-20 py-4 text-[20px] font-semibold hover:bg-blue-500 tracking-widest"
+                url="https://calendly.com/saulzavalamx/30min"
+                /*
+                 * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
+                 * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
+                 */
+                rootElement={document.getElementById("popup")!}
+                text="¡Agenda Ahora!"
+              />
             </div>
           </div>
 
           <img
-            className='w-72 mx-auto'
-            src='./tablet.png'
-            alt='tablet ebook image'
+            className="w-72 mx-auto"
+            src="/logo/logo-light-streamline.png"
+            alt="tablet ebook image"
           />
         </div>
       </div>

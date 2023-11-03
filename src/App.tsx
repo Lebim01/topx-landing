@@ -12,6 +12,7 @@ function App() {
       <Register />
       <Events />
       <Footer />
+      <div id="popup"></div>
     </>
   );
 }
