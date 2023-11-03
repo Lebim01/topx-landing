@@ -10,7 +10,6 @@ function App() {
       <Conference />
       <Register />
       <Events />
-      <div id="popup"></div>
     </>
   );
 }
