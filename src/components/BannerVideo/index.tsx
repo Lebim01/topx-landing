@@ -10,12 +10,13 @@ const BannerVideo = () => {
       <div className="max-w-7xl mx-auto flex flex-col space-y-">
         <div>
           <h1
-            className="text-white text-[50px] md:text-[70px] text-center font-bold tracking-[3px]"
+            className="text-white text-[30px] md:text-[70px] text-center font-bold tracking-[3px]"
             style={{
               fontFamily: "family-title",
             }}
           >
-            BIENVENIDO A LA <span className="text-[#a67c00]">ERA DORADA</span>
+            BIENVENIDO A LA{" "}
+            <span className="text-[#a67c00] whitespace-nowrap">ERA DORADA</span>
             <br />
             DEL MULTINIVEL
           </h1>
