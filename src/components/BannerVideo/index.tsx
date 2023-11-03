@@ -58,11 +58,11 @@ const BannerVideo = () => {
           </div>
         </div>
 
-        <div>
+        <div className="mt-[20px] md:mt-0">
           <InlineWidget
-            url="https://calendly.com/saulzavalamx/30min"
+            url="https://calendly.com/saulzavalamx/30min?hide_gdpr_banner=1"
             styles={{
-              height: 700,
+              height: width && width >= 1000 ? 700 : 850,
               width: width && width >= 1000 ? 1000 : 350,
               margin: "0px auto",
             }}
