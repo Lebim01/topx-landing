@@ -4,7 +4,7 @@ const Calendar = () => {
   return (
     <div className="flex flex-col items-center font-barlow text-center">
       <Icon src="./calendar.png" alt="calendarImage" />
-      <span className="text-blue-400 font-medium text-xl uppercase md:text-3xl">
+      <span className="text-black font-semibold text-2xl uppercase md:text-3xl">
         TE ESPERAMOS
       </span>
     </div>
