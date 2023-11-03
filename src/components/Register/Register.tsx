@@ -1,9 +1,14 @@
-import { useRef } from "react";
+import { useCallback, useState } from "react";
 import { PopupButton } from "react-calendly";
 import { FaChevronDown } from "react-icons/fa";
 
 const Register = () => {
-  const ref = useRef(null);
+  const [render, setRender] = useState(null);
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const cb = useCallback((ref: any) => {
+    setRender(ref);
+  }, []);
 
   return (
     <section className="background">
@@ -17,7 +22,7 @@ const Register = () => {
             <div className="w-max flex flex-col items-center pt-3 md:justify-start space-y-4 mx-auto md:mx-0">
               <FaChevronDown style={{ color: "white", fontSize: 40 }} />
 
-              {ref.current && (
+              {render && (
                 <PopupButton
                   className="bg-blue-600 font-barlow text-white uppercase rounded-full px-20 py-4 text-[20px] font-semibold hover:bg-blue-500 tracking-widest"
                   url="https://calendly.com/saulzavalamx/30min"
@@ -25,12 +30,12 @@ const Register = () => {
                    * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
                    * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
                    */
-                  rootElement={ref.current}
+                  rootElement={render}
                   text="¡Agenda Ahora!"
                 />
               )}
             </div>
-            <div id="popup" ref={ref}></div>
+            <div id="popup" ref={cb}></div>
           </div>
 
           <img
