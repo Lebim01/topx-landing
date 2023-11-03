@@ -5,13 +5,18 @@ const BannerVideo = () => {
     <section className="background py-8 md:py-20">
       <div className="max-w-7xl mx-auto">
         <div>
-          <h1 className="text-white text-2xl text-center">
+          <h1
+            className="text-white text-[40px] md:text-[50px] text-center font-bold"
+            style={{
+              fontFamily: "family-title",
+            }}
+          >
             LA ERA DORADA DEL MULTINIVEL
           </h1>
         </div>
 
         <div className="flex flex-col-reverse md:flex-row w-full md:space-x-10 mt-[20px] px-4">
-          <div className="hidden md:block">
+          <div className="pt-[40px] md:pt-0 flex-1">
             <InlineWidget
               url="https://calendly.com/saulzavalamx/30min?hide_event_type_details=1&hide_gdpr_banner=1"
               styles={{
@@ -21,7 +26,7 @@ const BannerVideo = () => {
               }}
             />
           </div>
-          <div className="pt-[40px]">
+          <div className="flex-1">
             <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
               <iframe
                 src="https://player.vimeo.com/video/880704390?h=092f8223c8&autoplay=1&loop=1&byline=0&portrait=0"
@@ -38,17 +43,6 @@ const BannerVideo = () => {
               ></iframe>
             </div>
           </div>
-        </div>
-
-        <div className="block md:hidden mt-[40px]">
-          <InlineWidget
-            url="https://calendly.com/saulzavalamx/30min?hide_event_type_details=1&hide_gdpr_banner=1"
-            styles={{
-              height: 600,
-              width: 350,
-              margin: "0px auto",
-            }}
-          />
         </div>
       </div>
     </section>
