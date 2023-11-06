@@ -16,8 +16,7 @@ const BannerVideo = () => {
             }}
           >
             ESTÁS A UN PASO DE UNIRTE A LA{" "}
-            <span className="text-[#a67c00] whitespace-nowrap">ERA DORADA</span>
-            <br />
+            <span className="text-[#a67c00] whitespace-nowrap">ERA DORADA </span>
             DEL MULTINIVEL
           </h1>
         </div>
@@ -48,7 +47,7 @@ const BannerVideo = () => {
               fontFamily: "family-title",
             }}
           >
-            Agenda tu cita. Tenemos sólo 27 lugares para personas comprometidas con generar a través del network marketing.{" "}
+            Agenda tu cita. Tenemos sólo 27 lugares para personas comprometidas con hacer historia a través del network marketing.{" "}
             <span className="font-bold">¡Te vemos en tu llamada!</span>
           </p>
 
