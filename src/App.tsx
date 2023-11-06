@@ -1,6 +1,7 @@
 import BannerVideo from "./components/BannerVideo";
 import Conference from "./components/Conference/Conference";
 import Events from "./components/Events/Events";
+import Footer from "./components/Footer";
 import Register from "./components/Register/Register";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Conference />
       <Register />
       <Events />
+      <Footer />
     </>
   );
 }
